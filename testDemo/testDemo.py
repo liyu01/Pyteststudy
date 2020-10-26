@@ -9,6 +9,8 @@ from selenium.webdriver.chrome.options import Options
 
 class TestTestdemo():
     def setup_method(self, method):
+        #  电脑启用922端口，调用启动Chrome
+        #  C:\Users\86176\AppData\Local\Google\Chrome\Application\chrome --remote-debugging-port=9222
         options = Options()
         options.debugger_address = "127.0.0.1:9222"
         self.driver = webdriver.Chrome(options=options)
